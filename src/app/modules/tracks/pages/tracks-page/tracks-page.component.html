@@ -1,10 +1,11 @@
 <div class="tracks-page">
-    <!-- seccion top (small) -->
-    <app-section-generic [title]="'¡La mejor música del mundo!'"></app-section-generic>
-    <!-- seccion medium (big) -->
-    <app-section-generic [title]="'Lo mejor de Electrónica'"></app-section-generic>
+    <!-- seccion top (small) Agreamos el modo y el dataTracks-->
+    <app-section-generic [dataTracks] ="mockTracksList" [mode]="'small'" [title]="'¡La mejor música del mundo!'"></app-section-generic>
+    <!-- seccion medium (big) Agregamos el modo-->
+    <app-section-generic [dataTracks] ="mockTracksList" [mode]="'big'" [title]="'Lo mejor de Electrónica'"></app-section-generic>
 </div>
   
+
   
   
 

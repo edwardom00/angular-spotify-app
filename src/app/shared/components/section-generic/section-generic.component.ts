@@ -1,4 +1,5 @@
 import { Component, Input, OnInit} from '@angular/core';
+import { TrackModel } from '@core/models/tracks.model';
 
 @Component({
   selector: 'app-section-generic',
@@ -7,11 +8,13 @@ import { Component, Input, OnInit} from '@angular/core';
 })
 export class SectionGenericComponent implements OnInit{
   @Input() title: string;
+  @Input() mode: 'small' | 'big' = 'big' //Agregamos el mode
+  @Input() dataTracks: Array<TrackModel> = [] //Agregamos el array datatracks<TrackModels>
   constructor(){
     this.title = '';
   }
 
   ngOnInit(): void {
-    console.log('Title:', this.title);
+    //console.log('Title:', this.title);
   }
 }
