@@ -8,9 +8,11 @@ import * as dataRaw from '../../../data/tracks.json';
   styleUrl: './play-list-body.component.css'
 })
 export class PlayListBodyComponent implements OnInit{
+  //Añadimos el track con el array TrackModel
   tracks: TrackModel[] = []
   constructor() { }
   ngOnInit(): void {
+    //Usamos el dataRaw que importamos
   const {data}: any = (dataRaw as any).default
   this.tracks = data;
 }

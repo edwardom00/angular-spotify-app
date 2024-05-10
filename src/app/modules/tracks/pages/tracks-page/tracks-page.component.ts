@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//Importamos la data
+//Importamos la data tracks.json como dataRaw
 import * as dataRaw from '../../../../data/tracks.json'
 
 @Component({
@@ -8,6 +8,7 @@ import * as dataRaw from '../../../../data/tracks.json'
   styleUrl: './tracks-page.component.css'
 })
 export class TracksPageComponent implements OnInit{
+  //Añadimos el array mockTracksList
   mockTracksList = [
 
     ]
@@ -15,6 +16,7 @@ export class TracksPageComponent implements OnInit{
 
     }
   ngOnInit(): void {
+    // usamos el dataRaw importado 
     const { data }: any =(dataRaw as any).default
     this.mockTracksList = data
   }
