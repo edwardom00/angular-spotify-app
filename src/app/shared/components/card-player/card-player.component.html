@@ -5,7 +5,8 @@
         {{track.name}}
     </div>
     <div class="buttons-player">
-        <button *ngIf="true" class="play-btn">
+        <!--Se agrega la funcion sendPlay creada-->
+        <button (click) = "sendPlay(track)" *ngIf="true" class="play-btn">
             <i class="uil " [ngClass]="{'uil-play':true}"></i>
         </button>
         <button *ngIf="false" class="play-btn">
